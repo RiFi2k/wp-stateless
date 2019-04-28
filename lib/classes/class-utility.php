@@ -81,10 +81,10 @@ namespace wpCloud\StatelessMedia {
         $_parts = array();
         $rand = substr(md5(time()), 0, 8);
 
-        $body_rewrite_types = ud_get_stateless_media()->get( 'sm.body_rewrite_types' );
-        if(empty($info['extension']) || strpos($body_rewrite_types, $info['extension']) === false){
-          return $filename;
-        }
+        // $body_rewrite_types = ud_get_stateless_media()->get( 'sm.body_rewrite_types' );
+        // if(empty($info['extension']) || strpos($body_rewrite_types, $info['extension']) === false){
+        //   return $filename;
+        // }
 
         if(strpos($filename, $rand) !== false){
           return $filename;
